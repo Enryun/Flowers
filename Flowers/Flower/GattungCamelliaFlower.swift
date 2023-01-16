@@ -1,29 +1,32 @@
 //
-//  CherryBlossom .swift
+//  GattungCamelliaFlower.swift
 //  Flowers
 //
-//  Created by user on 1/10/23.
+//  Created by James Thang on 16/01/2023.
 //
 
 import SwiftUI
 
-struct CherryBlossom_: View {
+
+struct GattungCamelliaFlower: View {
+    
     @State var angle: Double = 0
     @State var scale: CGFloat = 0
     
     var body: some View {
         ZStack {
             ForEach(0..<5) { item in
-                LotusFlowerPath()
-                    .fill(.pink.gradient.opacity(0.85))
-                    .frame(width: 120, height: 100)
-                    .offset(y: -60)
-                    .rotationEffect(.degrees(Double(item) * angle))
-                    .scaleEffect(CGFloat(scale))
                 
-                RoundedRectangle(cornerRadius: 0.5)
-                    .fill(.red.gradient)
-                    .frame(width: 1, height: 90)
+                LotusFlowerPath()
+                    .fill(.pink.gradient.opacity(0.8))
+                    .frame(width: 100, height: 100)
+                    .offset(y: -60)
+                    .rotationEffect(.degrees(Double(item) * angle + 36))
+                    .scaleEffect(CGFloat(scale))
+
+                LotusFlowerPath()
+                    .fill(.pink.gradient.opacity(0.5))
+                    .frame(width: 120, height: 100)
                     .offset(y: -60)
                     .rotationEffect(.degrees(Double(item) * angle))
                     .scaleEffect(CGFloat(scale))
@@ -31,7 +34,7 @@ struct CherryBlossom_: View {
         }
         .overlay {
             Circle()
-                .fill(.red.gradient)
+                .fill(.yellow.gradient)
                 .frame(width: 30, height: 30)
         }
         .padding()
@@ -45,8 +48,8 @@ struct CherryBlossom_: View {
     }
 }
 
-struct CherryBlossom__Previews: PreviewProvider {
+struct GattungCamelliaFlower_Previews: PreviewProvider {
     static var previews: some View {
-        CherryBlossom_()
+        GattungCamelliaFlower()
     }
 }
