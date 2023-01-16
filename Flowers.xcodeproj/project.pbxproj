@@ -13,6 +13,8 @@
 		302B8A4429758B090037997A /* NormalFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A4329758B090037997A /* NormalFlower.swift */; };
 		302B8A4629758EA00037997A /* MarigoldFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A4529758EA00037997A /* MarigoldFlower.swift */; };
 		302B8A48297596FB0037997A /* LotusFlowerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A47297596FB0037997A /* LotusFlowerPath.swift */; };
+		302B8A4A2975A3D40037997A /* RoseFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A492975A3D40037997A /* RoseFlower.swift */; };
+		302B8A4C2975AB600037997A /* DaisyFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A4B2975AB600037997A /* DaisyFlower.swift */; };
 		CE167CA7296D35C900A07577 /* FlowersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE167CA6296D35C900A07577 /* FlowersApp.swift */; };
 		CE167CA9296D35C900A07577 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE167CA8296D35C900A07577 /* ContentView.swift */; };
 		CE167CAB296D35CB00A07577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE167CAA296D35CB00A07577 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		302B8A4329758B090037997A /* NormalFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalFlower.swift; sourceTree = "<group>"; };
 		302B8A4529758EA00037997A /* MarigoldFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarigoldFlower.swift; sourceTree = "<group>"; };
 		302B8A47297596FB0037997A /* LotusFlowerPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusFlowerPath.swift; sourceTree = "<group>"; };
+		302B8A492975A3D40037997A /* RoseFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoseFlower.swift; sourceTree = "<group>"; };
+		302B8A4B2975AB600037997A /* DaisyFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaisyFlower.swift; sourceTree = "<group>"; };
 		CE167CA3296D35C900A07577 /* Flowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE167CA6296D35C900A07577 /* FlowersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersApp.swift; sourceTree = "<group>"; };
 		CE167CA8296D35C900A07577 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				302B8A4529758EA00037997A /* MarigoldFlower.swift */,
 				CE167CB6296D4F4400A07577 /* CherryBlossom .swift */,
 				CE167CBD296D5BA700A07577 /* LotusFlower .swift */,
+				302B8A492975A3D40037997A /* RoseFlower.swift */,
+				302B8A4B2975AB600037997A /* DaisyFlower.swift */,
 			);
 			path = Flower;
 			sourceTree = "<group>";
@@ -189,6 +195,7 @@
 				CE167CBB296D540700A07577 /* Hexadexagon.swift in Sources */,
 				CE167CB9296D52C400A07577 /* DrawingPath.swift in Sources */,
 				CE167CA9296D35C900A07577 /* ContentView.swift in Sources */,
+				302B8A4C2975AB600037997A /* DaisyFlower.swift in Sources */,
 				302B8A4029755EB50037997A /* YellowDaisyFlower.swift in Sources */,
 				302B8A4429758B090037997A /* NormalFlower.swift in Sources */,
 				302B8A4629758EA00037997A /* MarigoldFlower.swift in Sources */,
@@ -197,6 +204,7 @@
 				CE167CA7296D35C900A07577 /* FlowersApp.swift in Sources */,
 				CE167CB7296D4F4400A07577 /* CherryBlossom .swift in Sources */,
 				302B8A48297596FB0037997A /* LotusFlowerPath.swift in Sources */,
+				302B8A4A2975A3D40037997A /* RoseFlower.swift in Sources */,
 				CE167CBE296D5BA700A07577 /* LotusFlower .swift in Sources */,
 				302B8A3E29755B8D0037997A /* ChrysanthemumPath.swift in Sources */,
 			);
