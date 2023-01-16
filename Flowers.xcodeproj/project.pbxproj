@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302B8A3E29755B8D0037997A /* ChrysanthemumPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A3D29755B8D0037997A /* ChrysanthemumPath.swift */; };
+		302B8A4029755EB50037997A /* YellowDaisyFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A3F29755EB50037997A /* YellowDaisyFlower.swift */; };
 		CE167CA7296D35C900A07577 /* FlowersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE167CA6296D35C900A07577 /* FlowersApp.swift */; };
 		CE167CA9296D35C900A07577 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE167CA8296D35C900A07577 /* ContentView.swift */; };
 		CE167CAB296D35CB00A07577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE167CAA296D35CB00A07577 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		302B8A3D29755B8D0037997A /* ChrysanthemumPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChrysanthemumPath.swift; sourceTree = "<group>"; };
+		302B8A3F29755EB50037997A /* YellowDaisyFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowDaisyFlower.swift; sourceTree = "<group>"; };
 		CE167CA3296D35C900A07577 /* Flowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE167CA6296D35C900A07577 /* FlowersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersApp.swift; sourceTree = "<group>"; };
 		CE167CA8296D35C900A07577 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		302B8A3C29755B490037997A /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				CE167CB8296D52C400A07577 /* DrawingPath.swift */,
+				302B8A3D29755B8D0037997A /* ChrysanthemumPath.swift */,
+			);
+			path = Path;
+			sourceTree = "<group>";
+		};
 		CE167C9A296D35C900A07577 = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +79,7 @@
 				CE167CA8296D35C900A07577 /* ContentView.swift */,
 				CE167CAA296D35CB00A07577 /* Assets.xcassets */,
 				CE167CAC296D35CB00A07577 /* Preview Content */,
-				CE167CB8296D52C400A07577 /* DrawingPath.swift */,
+				302B8A3C29755B490037997A /* Path */,
 				CE167CBA296D540700A07577 /* Hexadexagon.swift */,
 			);
 			path = Flowers;
@@ -84,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CE167CB4296D4F2000A07577 /* ApricotFlower.swift */,
+				302B8A3F29755EB50037997A /* YellowDaisyFlower.swift */,
 				CE167CB6296D4F4400A07577 /* CherryBlossom .swift */,
 				CE167CBD296D5BA700A07577 /* LotusFlower .swift */,
 			);
@@ -163,10 +177,12 @@
 				CE167CBB296D540700A07577 /* Hexadexagon.swift in Sources */,
 				CE167CB9296D52C400A07577 /* DrawingPath.swift in Sources */,
 				CE167CA9296D35C900A07577 /* ContentView.swift in Sources */,
+				302B8A4029755EB50037997A /* YellowDaisyFlower.swift in Sources */,
 				CE167CB5296D4F2000A07577 /* ApricotFlower.swift in Sources */,
 				CE167CA7296D35C900A07577 /* FlowersApp.swift in Sources */,
 				CE167CB7296D4F4400A07577 /* CherryBlossom .swift in Sources */,
 				CE167CBE296D5BA700A07577 /* LotusFlower .swift in Sources */,
+				302B8A3E29755B8D0037997A /* ChrysanthemumPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

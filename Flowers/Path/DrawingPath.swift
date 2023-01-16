@@ -39,5 +39,6 @@ struct CurveShape: View {
 struct DrawingPath_Previews: PreviewProvider {
     static var previews: some View {
         DrawingPath()
+            .frame(width: 110, height: 20)
     }
 }
