@@ -17,14 +17,14 @@ struct GattungCamelliaFlower: View {
         ZStack {
             ForEach(0..<5) { item in
                 
-                LotusFlowerPath()
+                CheryBlossomFlowerPath()
                     .fill(.pink.gradient.opacity(0.8))
                     .frame(width: 100, height: 100)
                     .offset(y: -60)
                     .rotationEffect(.degrees(Double(item) * angle + 36))
                     .scaleEffect(CGFloat(scale))
 
-                LotusFlowerPath()
+                CheryBlossomFlowerPath()
                     .fill(.pink.gradient.opacity(0.5))
                     .frame(width: 120, height: 100)
                     .offset(y: -60)

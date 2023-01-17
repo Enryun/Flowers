@@ -14,7 +14,7 @@ struct CherryBlossom_: View {
     var body: some View {
         ZStack {
             ForEach(0..<5) { item in
-                LotusFlowerPath()
+                CheryBlossomFlowerPath()
                     .fill(.pink.gradient.opacity(0.85))
                     .frame(width: 120, height: 100)
                     .offset(y: -60)

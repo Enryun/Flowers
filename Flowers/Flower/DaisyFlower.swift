@@ -28,18 +28,18 @@ struct DaisyFlower: View {
                 .fill(.yellow.gradient)
                 .frame(width: 60, height: 60)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.black)
-        .ignoresSafeArea(.all)
         .padding()
         .padding(.bottom, 50)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background {
+            Color.black.ignoresSafeArea(.all)
+        }
         .onAppear {
             withAnimation(.easeInOut(duration: 4).delay(0.5)) {
                 angle = 36
                 scale = 1
             }
         }
-        
     }
 }
 
