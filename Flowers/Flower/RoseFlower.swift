@@ -15,42 +15,36 @@ struct RoseFlower: View {
         ZStack {
             ForEach(0..<5) { item in
                 
-                NormalFlowerPath()
-                    .fill(Gradient(colors: [.white, .white.opacity(0.8), .white.opacity(0.4)]))
-                    .frame(width: 300, height: 200)
-                    .offset(y: -90)
-                    .rotation3DEffect(.degrees(Double(item) * angle), axis: (x: 0.0, y: 0.2, z: 0.0), anchor: .center)
+                let backColor = Gradient(colors: [.purple, .white])
+                let groudColor = Gradient(colors: [.purple, .white])
+                
+                LotusFlowerPath()
+                    .fill((item == 1 || item == 4) ? groudColor : backColor)
+                    .frame(width: 340, height: 160)
+                    .offset(y: -120)
+                    .rotation3DEffect(
+                        .degrees((item == 1 || item == 4) ? 0 : Double(item) * angle),
+                        axis: (x: 0.0, y: 0.2, z: 0.0),
+                        anchor: .center)
                     .scaleEffect(CGFloat(scale))
                     .rotationEffect(.degrees(Double(item) * angle))
-//                NormalFlowerPath()
-//                    .fill(.orange.gradient)
-//                    .frame(width: 70, height: 15)
-//                    .offset(x: 60)
-//                    .rotationEffect(.degrees((Double(item) * angle) + 30))
-//                    .scaleEffect(CGFloat(scale))
-//
-//                NormalFlowerPath()
-//                    .fill(.orange.gradient)
-//                    .frame(width: 110, height: 20)
-//                    .offset(x: 95)
-//                    .rotationEffect(.degrees((Double(item) * angle) + 30))
-//                    .scaleEffect(CGFloat(scale))
-//
-//                NormalFlowerPath()
-//                    .fill(.orange.gradient)
-//                    .frame(width: 110, height: 20)
-//                    .offset(x: 130)
-//                    .rotationEffect(.degrees((Double(item) * angle) + 25))
-//                    .scaleEffect(CGFloat(scale))
+                    .zIndex((item == 1 || item == 4) ? 1 : 0)
+                
+                RoundedRectangle(cornerRadius: 0.5)
+                    .fill(.white)
+                    .frame(width: 10, height: 25)
+                    .offset(y: -30)
+                    .rotationEffect(.degrees(Double(item) * angle))
+                    .scaleEffect(CGFloat(scale))
             }
             
         }
         .rotation3DEffect(.degrees(45), axis: (x: 0.0, y: 0.0, z: 0.0), anchor: .center)
         
         .overlay {
-//            Circle()
-//                .frame(width: 60, height: 60)
-//                .foregroundColor(.orange)
+            Circle()
+                .frame(width: 60, height: 60)
+                .foregroundColor(.orange)
         }
         .padding()
         .padding(.bottom, 50)

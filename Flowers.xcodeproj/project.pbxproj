@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30081974297735FB008354C2 /* TuberoseFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30081973297735FB008354C2 /* TuberoseFlower.swift */; };
+		300819762977369B008354C2 /* RoseMyrtleFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300819752977369B008354C2 /* RoseMyrtleFlower.swift */; };
 		302B8A3E29755B8D0037997A /* ChrysanthemumPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A3D29755B8D0037997A /* ChrysanthemumPath.swift */; };
 		302B8A4029755EB50037997A /* YellowDaisyFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A3F29755EB50037997A /* YellowDaisyFlower.swift */; };
 		302B8A42297587C80037997A /* NormalFlowerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A41297587C80037997A /* NormalFlowerPath.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30081973297735FB008354C2 /* TuberoseFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuberoseFlower.swift; sourceTree = "<group>"; };
+		300819752977369B008354C2 /* RoseMyrtleFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoseMyrtleFlower.swift; sourceTree = "<group>"; };
 		302B8A3D29755B8D0037997A /* ChrysanthemumPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChrysanthemumPath.swift; sourceTree = "<group>"; };
 		302B8A3F29755EB50037997A /* YellowDaisyFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowDaisyFlower.swift; sourceTree = "<group>"; };
 		302B8A41297587C80037997A /* NormalFlowerPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalFlowerPath.swift; sourceTree = "<group>"; };
@@ -122,11 +126,13 @@
 				302B8A3F29755EB50037997A /* YellowDaisyFlower.swift */,
 				302B8A4529758EA00037997A /* MarigoldFlower.swift */,
 				CE167CB6296D4F4400A07577 /* CherryBlossom .swift */,
-				302B8A492975A3D40037997A /* RoseFlower.swift */,
+				30081973297735FB008354C2 /* TuberoseFlower.swift */,
 				302B8A4B2975AB600037997A /* DaisyFlower.swift */,
 				302B8A4D2975B5CB0037997A /* GattungCamelliaFlower.swift */,
 				30EAD51C29766A3A00332218 /* LotusFlower.swift */,
 				30EAD52029767ADA00332218 /* Sunflower.swift */,
+				302B8A492975A3D40037997A /* RoseFlower.swift */,
+				300819752977369B008354C2 /* RoseMyrtleFlower.swift */,
 			);
 			path = Flower;
 			sourceTree = "<group>";
@@ -207,12 +213,14 @@
 				CE167CA9296D35C900A07577 /* ContentView.swift in Sources */,
 				302B8A4C2975AB600037997A /* DaisyFlower.swift in Sources */,
 				302B8A4029755EB50037997A /* YellowDaisyFlower.swift in Sources */,
+				300819762977369B008354C2 /* RoseMyrtleFlower.swift in Sources */,
 				302B8A4429758B090037997A /* NormalFlower.swift in Sources */,
 				302B8A4629758EA00037997A /* MarigoldFlower.swift in Sources */,
 				302B8A4E2975B5CB0037997A /* GattungCamelliaFlower.swift in Sources */,
 				302B8A42297587C80037997A /* NormalFlowerPath.swift in Sources */,
 				CE167CB5296D4F2000A07577 /* ApricotFlower.swift in Sources */,
 				CE167CA7296D35C900A07577 /* FlowersApp.swift in Sources */,
+				30081974297735FB008354C2 /* TuberoseFlower.swift in Sources */,
 				CE167CB7296D4F4400A07577 /* CherryBlossom .swift in Sources */,
 				30EAD52129767ADA00332218 /* Sunflower.swift in Sources */,
 				302B8A48297596FB0037997A /* CheryBlossomFlowerPath.swift in Sources */,

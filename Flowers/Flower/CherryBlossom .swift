@@ -16,15 +16,15 @@ struct CherryBlossom_: View {
             ForEach(0..<5) { item in
                 CheryBlossomFlowerPath()
                     .fill(.pink.gradient.opacity(0.85))
-                    .frame(width: 120, height: 100)
-                    .offset(y: -60)
+                    .frame(width: 240, height: 200)
+                    .offset(y: -95)
                     .rotationEffect(.degrees(Double(item) * angle))
                     .scaleEffect(CGFloat(scale))
                 
                 RoundedRectangle(cornerRadius: 0.5)
                     .fill(.red.gradient)
-                    .frame(width: 1, height: 90)
-                    .offset(y: -60)
+                    .frame(width: 1, height: 180)
+                    .offset(y: -95)
                     .rotationEffect(.degrees(Double(item) * angle))
                     .scaleEffect(CGFloat(scale))
             }

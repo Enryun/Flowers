@@ -16,67 +16,67 @@ struct Sunflower: View {
     var body: some View {
         ZStack {
             
-            ForEach(0..<60) { item in
+            ForEach(0..<24) { item in
                 ChrysanthemumPath()
-                    .fill(.yellow.gradient)
-                    .frame(width: 150, height: 50)
+                    .fill(Gradient(colors: [.orange, .yellow]))
+                    .frame(width: 160, height: 25)
                     .offset(x: 135)
-                    .rotationEffect(.degrees((Double(item) * angle3) + 30))
+                    .rotationEffect(.degrees((Double(item) * angle2) + 37.5))
                     .scaleEffect(CGFloat(scale))
             }
             
-            ForEach(0..<48) { item in
+            ForEach(0..<24) { item in
                 ChrysanthemumPath()
-                    .fill(.orange.gradient)
-                    .frame(width: 150, height: 50)
-                    .offset(x: 105)
-                    .rotationEffect(.degrees((Double(item) * angle2) + 35))
+                    .fill(.yellow.gradient)
+                    .frame(width: 160, height: 25)
+                    .offset(x: 135)
+                    .rotationEffect(.degrees((Double(item) * angle2) + 30))
                     .scaleEffect(CGFloat(scale))
             }
             
             ForEach(0..<36) { item in
                 ZStack {
                     ChrysanthemumPath()
-                        .fill(.yellow.gradient)
+                        .fill(Gradient(colors: [.yellow, .yellow, .orange]))
                         .frame(width: 150, height: 50)
                         .offset(x: 75)
                         .rotationEffect(.degrees((Double(item) * angle) + 30))
                         .scaleEffect(CGFloat(scale))                    
                 }
             }
+            
         }
         .overlay {
             Circle()
-                .fill(Gradient(colors: [.orange, .yellow, .green]))
+                .fill(Gradient(colors: [.green, .black.opacity(0.5), .green]))
                 .frame(width: 120, height: 120)
                 .overlay {
                     ZStack {
                         ForEach(0..<36) { item in
-                            
                             NormalFlowerPath()
                                 .fill(.black.gradient)
-                                .frame(width: 8, height: 8)
+                                .frame(width: 4, height: 4)
                                 .offset(x: 10)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))
                                 .scaleEffect(CGFloat(scale))
                             
                             NormalFlowerPath()
                                 .fill(.black.gradient)
-                                .frame(width: 8, height: 8)
+                                .frame(width: 4, height: 4)
                                 .offset(x: 15)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))
                                 .scaleEffect(CGFloat(scale))
                             
                             NormalFlowerPath()
                                 .fill(.black.gradient)
-                                .frame(width: 8, height: 8)
+                                .frame(width: 4, height: 4)
                                 .offset(x: 20)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))
                                 .scaleEffect(CGFloat(scale))
                             
                             NormalFlowerPath()
                                 .fill(.black.gradient)
-                                .frame(width: 8, height: 8)
+                                .frame(width: 4, height: 4)
                                 .offset(x: 25)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))
                                 .scaleEffect(CGFloat(scale))
@@ -90,21 +90,21 @@ struct Sunflower: View {
                             
                             NormalFlowerPath()
                                 .fill(.black.gradient)
-                                .frame(width: 8, height: 8)
+                                .frame(width: 6, height: 6)
                                 .offset(x: 35)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))
                                 .scaleEffect(CGFloat(scale))
                             
                             NormalFlowerPath()
                                 .fill(.black.gradient)
-                                .frame(width: 8, height: 8)
+                                .frame(width: 6, height: 6)
                                 .offset(x: 40)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))
                                 .scaleEffect(CGFloat(scale))
                             
                             NormalFlowerPath()
                                 .fill(.black.gradient)
-                                .frame(width: 8, height: 8)
+                                .frame(width: 6, height: 6)
                                 .offset(x: 45)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))
                                 .scaleEffect(CGFloat(scale))
@@ -131,7 +131,7 @@ struct Sunflower: View {
         .onAppear {
             withAnimation(.easeInOut(duration: 4).delay(0.5)) {
                 angle = 10
-                angle2 = 7.5
+                angle2 = 15
                 angle3 = 6
                 scale = 1
             }
