@@ -12,7 +12,7 @@ struct NormalFlower: View {
     @State var angle: Double = 0
     @State var scale: CGFloat = 0
     
-    let colors: [Color] = [.red, .orange, .blue, .indigo, .purple]
+    let colors: [Color] = [.red, .orange, .blue, .yellow, .purple]
     
     var body: some View {
         ZStack {

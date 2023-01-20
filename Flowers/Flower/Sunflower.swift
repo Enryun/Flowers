@@ -18,7 +18,7 @@ struct Sunflower: View {
             
             ForEach(0..<24) { item in
                 ChrysanthemumPath()
-                    .fill(Gradient(colors: [.orange, .yellow]))
+                    .fill(Gradient(colors: [.orange, .yellow, .yellow]))
                     .frame(width: 160, height: 25)
                     .offset(x: 135)
                     .rotationEffect(.degrees((Double(item) * angle2) + 37.5))
@@ -27,7 +27,7 @@ struct Sunflower: View {
             
             ForEach(0..<24) { item in
                 ChrysanthemumPath()
-                    .fill(.yellow.gradient)
+                    .fill(Gradient(colors: [.orange, .yellow, .yellow]))
                     .frame(width: 160, height: 25)
                     .offset(x: 135)
                     .rotationEffect(.degrees((Double(item) * angle2) + 30))
@@ -48,7 +48,7 @@ struct Sunflower: View {
         }
         .overlay {
             Circle()
-                .fill(Gradient(colors: [.green, .black.opacity(0.5), .green]))
+                .fill(.yellow.opacity(0.5).gradient)
                 .frame(width: 120, height: 120)
                 .overlay {
                     ZStack {
@@ -82,7 +82,7 @@ struct Sunflower: View {
                                 .scaleEffect(CGFloat(scale))
                             
                             NormalFlowerPath()
-                                .fill(.black.gradient)
+                                .fill(.green.gradient)
                                 .frame(width: 8, height: 8)
                                 .offset(x: 30)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))
@@ -110,7 +110,7 @@ struct Sunflower: View {
                                 .scaleEffect(CGFloat(scale))
                             
                             NormalFlowerPath()
-                                .fill(.black.gradient)
+                                .fill(.green.gradient)
                                 .frame(width: 8, height: 8)
                                 .offset(x: 50)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))

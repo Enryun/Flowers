@@ -18,6 +18,8 @@
 		302B8A4A2975A3D40037997A /* RoseFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A492975A3D40037997A /* RoseFlower.swift */; };
 		302B8A4C2975AB600037997A /* DaisyFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A4B2975AB600037997A /* DaisyFlower.swift */; };
 		302B8A4E2975B5CB0037997A /* GattungCamelliaFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B8A4D2975B5CB0037997A /* GattungCamelliaFlower.swift */; };
+		30A629922979BCF100437F01 /* HeartShapePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A629912979BCF100437F01 /* HeartShapePath.swift */; };
+		30A629942979BDFE00437F01 /* FourLeafClover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A629932979BDFE00437F01 /* FourLeafClover.swift */; };
 		30EAD51D29766A3A00332218 /* LotusFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EAD51C29766A3A00332218 /* LotusFlower.swift */; };
 		30EAD51F2976732400332218 /* LotusFlowerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EAD51E2976732400332218 /* LotusFlowerPath.swift */; };
 		30EAD52129767ADA00332218 /* Sunflower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EAD52029767ADA00332218 /* Sunflower.swift */; };
@@ -43,6 +45,8 @@
 		302B8A492975A3D40037997A /* RoseFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoseFlower.swift; sourceTree = "<group>"; };
 		302B8A4B2975AB600037997A /* DaisyFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaisyFlower.swift; sourceTree = "<group>"; };
 		302B8A4D2975B5CB0037997A /* GattungCamelliaFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GattungCamelliaFlower.swift; sourceTree = "<group>"; };
+		30A629912979BCF100437F01 /* HeartShapePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartShapePath.swift; sourceTree = "<group>"; };
+		30A629932979BDFE00437F01 /* FourLeafClover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourLeafClover.swift; sourceTree = "<group>"; };
 		30EAD51C29766A3A00332218 /* LotusFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusFlower.swift; sourceTree = "<group>"; };
 		30EAD51E2976732400332218 /* LotusFlowerPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusFlowerPath.swift; sourceTree = "<group>"; };
 		30EAD52029767ADA00332218 /* Sunflower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sunflower.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				302B8A41297587C80037997A /* NormalFlowerPath.swift */,
 				302B8A47297596FB0037997A /* CheryBlossomFlowerPath.swift */,
 				30EAD51E2976732400332218 /* LotusFlowerPath.swift */,
+				30A629912979BCF100437F01 /* HeartShapePath.swift */,
 			);
 			path = Path;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				30EAD52029767ADA00332218 /* Sunflower.swift */,
 				302B8A492975A3D40037997A /* RoseFlower.swift */,
 				300819752977369B008354C2 /* RoseMyrtleFlower.swift */,
+				30A629932979BDFE00437F01 /* FourLeafClover.swift */,
 			);
 			path = Flower;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 				CE167CB9296D52C400A07577 /* DrawingPath.swift in Sources */,
 				30EAD51D29766A3A00332218 /* LotusFlower.swift in Sources */,
 				CE167CA9296D35C900A07577 /* ContentView.swift in Sources */,
+				30A629942979BDFE00437F01 /* FourLeafClover.swift in Sources */,
 				302B8A4C2975AB600037997A /* DaisyFlower.swift in Sources */,
 				302B8A4029755EB50037997A /* YellowDaisyFlower.swift in Sources */,
 				300819762977369B008354C2 /* RoseMyrtleFlower.swift in Sources */,
@@ -222,6 +229,7 @@
 				CE167CA7296D35C900A07577 /* FlowersApp.swift in Sources */,
 				30081974297735FB008354C2 /* TuberoseFlower.swift in Sources */,
 				CE167CB7296D4F4400A07577 /* CherryBlossom .swift in Sources */,
+				30A629922979BCF100437F01 /* HeartShapePath.swift in Sources */,
 				30EAD52129767ADA00332218 /* Sunflower.swift in Sources */,
 				302B8A48297596FB0037997A /* CheryBlossomFlowerPath.swift in Sources */,
 				302B8A4A2975A3D40037997A /* RoseFlower.swift in Sources */,
