@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import SwiftUI
 
 struct ChrysanthemumPath: Shape {
@@ -20,9 +19,23 @@ struct ChrysanthemumPath: Shape {
     }
 }
 
+
+struct ChrysanthemumOppositePath: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: rect.maxX, y: rect.midY))
+        
+        path.addArc(center: CGPoint(x: rect.minX, y: rect.midY), radius: 50, startAngle: .degrees(270), endAngle: .degrees(90), clockwise: true)
+        
+        return path
+    }
+}
+
+
+
 struct ChrysanthemumPath_Previews: PreviewProvider {
     static var previews: some View {
-        ChrysanthemumPath()
+        ChrysanthemumOppositePath()
             .frame(width: 110, height: 20)
             .foregroundColor(.yellow)
     }

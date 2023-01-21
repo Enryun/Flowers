@@ -16,33 +16,33 @@ struct Sunflower: View {
     var body: some View {
         ZStack {
             
-            ForEach(0..<24) { item in
-                ChrysanthemumPath()
-                    .fill(Gradient(colors: [.orange, .yellow, .yellow]))
-                    .frame(width: 160, height: 25)
-                    .offset(x: 135)
-                    .rotationEffect(.degrees((Double(item) * angle2) + 37.5))
+            ForEach(0..<12) { item in
+                ChrysanthemumOppositePath()
+                    .fill(Gradient(colors: [.orange, .yellow, .orange]))
+                    .frame(width: 160, height: 100)
+                    .offset(x: 125)
+                    .rotationEffect(.degrees((Double(item) * angle2) + 45))
                     .scaleEffect(CGFloat(scale))
             }
             
-            ForEach(0..<24) { item in
-                ChrysanthemumPath()
+            ForEach(0..<12) { item in
+                ChrysanthemumOppositePath()
                     .fill(Gradient(colors: [.orange, .yellow, .yellow]))
-                    .frame(width: 160, height: 25)
-                    .offset(x: 135)
+                    .frame(width: 160, height: 100)
+                    .offset(x: 120)
                     .rotationEffect(.degrees((Double(item) * angle2) + 30))
                     .scaleEffect(CGFloat(scale))
             }
             
             ForEach(0..<36) { item in
-                ZStack {
-                    ChrysanthemumPath()
-                        .fill(Gradient(colors: [.yellow, .yellow, .orange]))
-                        .frame(width: 150, height: 50)
-                        .offset(x: 75)
-                        .rotationEffect(.degrees((Double(item) * angle) + 30))
-                        .scaleEffect(CGFloat(scale))                    
-                }
+       
+                ChrysanthemumPath()
+                    .fill(Gradient(colors: [.yellow, .yellow, .gray]))
+                    .frame(width: 150, height: 50)
+                    .offset(x: 75)
+                    .rotationEffect(.degrees((Double(item) * angle) + 30))
+                    .scaleEffect(CGFloat(scale))
+                
             }
             
         }
@@ -131,7 +131,7 @@ struct Sunflower: View {
         .onAppear {
             withAnimation(.easeInOut(duration: 4).delay(0.5)) {
                 angle = 10
-                angle2 = 15
+                angle2 = 30
                 angle3 = 6
                 scale = 1
             }

@@ -23,7 +23,7 @@ struct FourLeafClover: View {
                     .scaleEffect(CGFloat(scale))
                 
                 RoundedRectangle(cornerRadius: 0.5)
-                    .fill(Gradient(colors: [.green, .yellow, .green]))
+                    .fill(Gradient(colors: [.orange, .yellow, .green]))
                     .frame(width: 1, height: 190)
                     .offset(y: -65)
                     .rotationEffect(.degrees(Double(item) * angle + 60))
