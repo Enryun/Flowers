@@ -37,7 +37,7 @@ struct Sunflower: View {
             ForEach(0..<36) { item in
        
                 ChrysanthemumPath()
-                    .fill(Gradient(colors: [.yellow, .yellow, .gray]))
+                    .fill(Gradient(colors: [.orange, .yellow, .gray]))
                     .frame(width: 150, height: 50)
                     .offset(x: 75)
                     .rotationEffect(.degrees((Double(item) * angle) + 30))
@@ -48,7 +48,7 @@ struct Sunflower: View {
         }
         .overlay {
             Circle()
-                .fill(.yellow.opacity(0.5).gradient)
+                .fill(.black.gradient)
                 .frame(width: 120, height: 120)
                 .overlay {
                     ZStack {
@@ -82,7 +82,7 @@ struct Sunflower: View {
                                 .scaleEffect(CGFloat(scale))
                             
                             NormalFlowerPath()
-                                .fill(.green.gradient)
+                                .fill(.orange.gradient)
                                 .frame(width: 8, height: 8)
                                 .offset(x: 30)
                                 .rotationEffect(.degrees((Double(item) * angle) + 30))

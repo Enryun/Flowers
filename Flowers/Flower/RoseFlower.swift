@@ -14,27 +14,11 @@ struct RoseFlower: View {
     var body: some View {
         ZStack {
             ForEach(0..<5) { item in
-                
-                let backColor = Gradient(colors: [.purple, .white])
-                let groudColor = Gradient(colors: [.purple, .white])
-                
-                LotusFlowerPath()
-                    .fill((item == 1 || item == 4) ? groudColor : backColor)
-                    .frame(width: 340, height: 160)
-                    .offset(y: -120)
-                    .rotation3DEffect(
-                        .degrees((item == 1 || item == 4) ? 0 : Double(item) * angle),
-                        axis: (x: 0.0, y: 0.2, z: 0.0),
-                        anchor: .center)
-                    .scaleEffect(CGFloat(scale))
-                    .rotationEffect(.degrees(Double(item) * angle))
-                    .zIndex((item == 1 || item == 4) ? 1 : 0)
-                
-                RoundedRectangle(cornerRadius: 0.5)
-                    .fill(.white)
-                    .frame(width: 10, height: 25)
-                    .offset(y: -30)
-                    .rotationEffect(.degrees(Double(item) * angle))
+                NormalFlowerPath()
+                    .fill(.red.gradient)
+                    .frame(width: 90, height: 50)
+                    .offset(x: 40)
+                    .rotationEffect(.degrees((Double(item) * angle) + 30))
                     .scaleEffect(CGFloat(scale))
             }
             
