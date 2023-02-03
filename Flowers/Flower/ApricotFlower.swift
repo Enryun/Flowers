@@ -11,6 +11,7 @@ struct ApricotFlower: View {
     @State var angle: Double = 0
     @State var angle2: Double = 0
     @State var scale: CGFloat = 0
+    var delayTime: Double = 0.5
     
     var body: some View {
         ZStack {
@@ -73,7 +74,7 @@ struct ApricotFlower: View {
         }
         .padding()
         .onAppear {
-            withAnimation(.easeInOut(duration: 4).delay(0.5)) {
+            withAnimation(.easeInOut(duration: 4).delay(delayTime)) {
                 angle = 60
                 angle2 = 15
                 scale = 1

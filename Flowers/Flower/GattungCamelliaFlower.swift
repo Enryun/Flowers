@@ -12,6 +12,7 @@ struct GattungCamelliaFlower: View {
     
     @State var angle: Double = 0
     @State var scale: CGFloat = 0
+    var delayTime: Double = 0.5
     
     var body: some View {
         ZStack {
@@ -40,7 +41,7 @@ struct GattungCamelliaFlower: View {
         .padding()
         .padding(.bottom, 50)
         .onAppear {
-            withAnimation(.easeInOut(duration: 4).delay(0.5)) {
+            withAnimation(.easeInOut(duration: 4).delay(delayTime)) {
                 angle = 72
                 scale = 1
             }

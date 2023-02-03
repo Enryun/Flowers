@@ -11,16 +11,16 @@ struct ContentView: View {
     var body: some View {
         ScrollView(.vertical) {
             VStack(spacing: 250) {
-                ApricotFlower()
-                YellowDaisyFlower()
-                CherryBlossom_()
-                TuberoseFlower()
-                MarigoldFlower()
-                GattungCamelliaFlower()
-                Sunflower()
-                FourLeafClover()
-                RoseMyrtleFlower()
-                IrisDomesticaFlower()
+                ApricotFlower(delayTime: 0.5)
+                YellowDaisyFlower(delayTime: 1)
+                CherryBlossom_(delayTime: 1.5)
+                TuberoseFlower(delayTime: 2)
+                MarigoldFlower(delayTime: 2.5)
+                GattungCamelliaFlower(delayTime: 3)
+                Sunflower(delayTime: 3.5)
+                FourLeafClover(delayTime: 4)
+                RoseMyrtleFlower(delayTime: 4.5)
+                IrisDomesticaFlower(delayTime: 5)
             }
             .offset(y: 100)
         }

@@ -12,6 +12,7 @@ struct Sunflower: View {
     @State var angle2: Double = 0
     @State var angle3: Double = 0
     @State var scale: CGFloat = 0
+    var delayTime: Double = 0.5
     
     var body: some View {
         ZStack {
@@ -129,7 +130,7 @@ struct Sunflower: View {
         .padding()
         .padding(.bottom, 50)
         .onAppear {
-            withAnimation(.easeInOut(duration: 4).delay(0.5)) {
+            withAnimation(.easeInOut(duration: 4).delay(delayTime)) {
                 angle = 10
                 angle2 = 30
                 angle3 = 6

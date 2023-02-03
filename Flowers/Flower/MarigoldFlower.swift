@@ -10,6 +10,7 @@ import SwiftUI
 struct MarigoldFlower: View {
     @State var angle: Double = 0
     @State var scale: CGFloat = 0
+    var delayTime: Double = 0.5
     
     var body: some View {
         ZStack {
@@ -51,7 +52,7 @@ struct MarigoldFlower: View {
         .padding()
         .padding(.bottom, 50)
         .onAppear {
-            withAnimation(.easeInOut(duration: 4).delay(0.5)) {
+            withAnimation(.easeInOut(duration: 4).delay(delayTime)) {
                 angle = 12
                 scale = 1
             }

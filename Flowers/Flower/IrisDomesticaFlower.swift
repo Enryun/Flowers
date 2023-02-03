@@ -10,7 +10,8 @@ import SwiftUI
 struct IrisDomesticaFlower: View {
     @State var angle: Double = 0
     @State var scale: CGFloat = 0
-    
+    var delayTime: Double = 0.5
+
     var body: some View {
         ZStack {
             ForEach(0..<36) { item in
@@ -26,7 +27,7 @@ struct IrisDomesticaFlower: View {
         .padding()
         .padding(.bottom, 50)
         .onAppear {
-            withAnimation(.easeInOut(duration: 4).delay(0.5)) {
+            withAnimation(.easeInOut(duration: 4).delay(delayTime)) {
                 angle = 10
                 scale = 1
             }

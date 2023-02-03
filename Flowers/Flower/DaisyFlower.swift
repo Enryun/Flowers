@@ -10,7 +10,8 @@ import SwiftUI
 struct DaisyFlower: View {
     @State var angle: Double = 0
     @State var scale: CGFloat = 0
-    
+    var delayTime: Double = 0.5
+
     var body: some View {
         ZStack {
             ForEach(0..<10) { item in
@@ -36,7 +37,7 @@ struct DaisyFlower: View {
             Color.black.ignoresSafeArea(.all)
         }
         .onAppear {
-            withAnimation(.easeInOut(duration: 4).delay(0.5)) {
+            withAnimation(.easeInOut(duration: 4).delay(delayTime)) {
                 angle = 36
                 scale = 1
             }
