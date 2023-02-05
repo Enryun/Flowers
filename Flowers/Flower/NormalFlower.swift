@@ -18,12 +18,22 @@ struct NormalFlower: View {
     var body: some View {
         ZStack {
             ForEach(0..<5) { item in
-                NormalFlowerPath()
-                    .fill(colors[item].gradient)
-                    .frame(width: 200, height: 160)
-                    .offset(y: -60)
-                    .rotationEffect(.degrees(Double(item) * angle))
-                    .scaleEffect(CGFloat(scale))
+                if #available(iOS 16.0, *) {
+                    NormalFlowerPath()
+                        .fill(colors[item].gradient)
+                        .frame(width: 200, height: 160)
+                        .offset(y: -60)
+                        .rotationEffect(.degrees(Double(item) * angle))
+                        .scaleEffect(CGFloat(scale))
+                } else {
+                    // Fallback on earlier versions
+                    NormalFlowerPath()
+                        .fill(colors[item])
+                        .frame(width: 200, height: 160)
+                        .offset(y: -60)
+                        .rotationEffect(.degrees(Double(item) * angle))
+                        .scaleEffect(CGFloat(scale))
+                }
             }
         }
         .overlay {

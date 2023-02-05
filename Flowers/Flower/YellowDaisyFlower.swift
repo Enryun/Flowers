@@ -17,21 +17,36 @@ struct YellowDaisyFlower: View {
         ZStack {
             ForEach(0..<36) { item in
                 
-                NormalFlowerPath()
-                    .fill(.black.gradient)
-                    .frame(width: 8, height: 8)
-                    .offset(x: 30)
-                    .rotationEffect(.degrees((Double(item) * angle) + 30))
-                    .scaleEffect(CGFloat(scale))
-                
-                ChrysanthemumPath()
-                    .fill(.yellow.gradient)
-                    .frame(width: 110, height: 20)
-                    .offset(x: 75)
-                    .rotationEffect(.degrees((Double(item) * angle) + 30))
-                    .scaleEffect(CGFloat(scale))
-                
-                
+                if #available(iOS 16.0, *) {
+                    NormalFlowerPath()
+                        .fill(.black.gradient)
+                        .frame(width: 8, height: 8)
+                        .offset(x: 30)
+                        .rotationEffect(.degrees((Double(item) * angle) + 30))
+                        .scaleEffect(CGFloat(scale))
+                    
+                    ChrysanthemumPath()
+                        .fill(.yellow.gradient)
+                        .frame(width: 110, height: 20)
+                        .offset(x: 75)
+                        .rotationEffect(.degrees((Double(item) * angle) + 30))
+                        .scaleEffect(CGFloat(scale))
+                } else {
+                    // Fallback on earlier versions
+                    NormalFlowerPath()
+                        .fill(.black)
+                        .frame(width: 8, height: 8)
+                        .offset(x: 30)
+                        .rotationEffect(.degrees((Double(item) * angle) + 30))
+                        .scaleEffect(CGFloat(scale))
+                    
+                    ChrysanthemumPath()
+                        .fill(.yellow)
+                        .frame(width: 110, height: 20)
+                        .offset(x: 75)
+                        .rotationEffect(.degrees((Double(item) * angle) + 30))
+                        .scaleEffect(CGFloat(scale))
+                }
             }
         }
         .overlay {

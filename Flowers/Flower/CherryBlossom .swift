@@ -15,25 +15,51 @@ struct CherryBlossom_: View {
     var body: some View {
         ZStack {
             ForEach(0..<5) { item in
-                CheryBlossomFlowerPath()
-                    .fill(.pink.gradient.opacity(0.85))
-                    .frame(width: 240, height: 200)
-                    .offset(y: -95)
-                    .rotationEffect(.degrees(Double(item) * angle))
-                    .scaleEffect(CGFloat(scale))
+                if #available(iOS 16.0, *) {
+                    CheryBlossomFlowerPath()
+                        .fill(.pink.gradient.opacity(0.85))
+                        .frame(width: 240, height: 200)
+                        .offset(y: -95)
+                        .rotationEffect(.degrees(Double(item) * angle))
+                        .scaleEffect(CGFloat(scale))
+                    
+                    RoundedRectangle(cornerRadius: 0.5)
+                        .fill(.red.gradient)
+                        .frame(width: 1, height: 180)
+                        .offset(y: -95)
+                        .rotationEffect(.degrees(Double(item) * angle))
+                        .scaleEffect(CGFloat(scale))
+                } else {
+                    // Fallback on earlier versions
+                    CheryBlossomFlowerPath()
+                        .fill(.pink.opacity(0.85))
+                        .frame(width: 240, height: 200)
+                        .offset(y: -95)
+                        .rotationEffect(.degrees(Double(item) * angle))
+                        .scaleEffect(CGFloat(scale))
+                    
+                    RoundedRectangle(cornerRadius: 0.5)
+                        .fill(.red)
+                        .frame(width: 1, height: 180)
+                        .offset(y: -95)
+                        .rotationEffect(.degrees(Double(item) * angle))
+                        .scaleEffect(CGFloat(scale))
+                }
                 
-                RoundedRectangle(cornerRadius: 0.5)
-                    .fill(.red.gradient)
-                    .frame(width: 1, height: 180)
-                    .offset(y: -95)
-                    .rotationEffect(.degrees(Double(item) * angle))
-                    .scaleEffect(CGFloat(scale))
+                
             }
         }
         .overlay {
-            Circle()
-                .fill(.red.gradient)
-                .frame(width: 30, height: 30)
+            if #available(iOS 16.0, *) {
+                Circle()
+                    .fill(.red.gradient)
+                    .frame(width: 30, height: 30)
+            } else {
+                // Fallback on earlier versions
+                Circle()
+                    .fill(.red)
+                    .frame(width: 30, height: 30)
+            }
         }
         .padding()
         .padding(.bottom, 50)

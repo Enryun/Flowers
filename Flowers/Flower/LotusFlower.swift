@@ -57,9 +57,16 @@ struct LotusFlower: View {
             }
         }
         .overlay {
-            Circle()
-                .fill(.yellow.gradient)
-                .frame(width: 30, height: 30)
+            if #available(iOS 16.0, *) {
+                Circle()
+                    .fill(.yellow.gradient)
+                    .frame(width: 30, height: 30)
+            } else {
+                // Fallback on earlier versions
+                Circle()
+                    .fill(.yellow)
+                    .frame(width: 30, height: 30)
+            }
         }
         .padding()
         .padding(.bottom, 50)

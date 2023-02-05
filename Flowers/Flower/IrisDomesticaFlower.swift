@@ -15,13 +15,24 @@ struct IrisDomesticaFlower: View {
     var body: some View {
         ZStack {
             ForEach(0..<36) { item in
-                IrisDomesticaPath()
-                    .fill(.yellow.gradient)
-                    .opacity(item < 20 ? 0 : 1)
-                    .frame(width: 160, height: 30)
-                    .offset(x: 75)
-                    .rotationEffect(.degrees((Double(item) * angle) + 30))
-                    .scaleEffect(CGFloat(scale))
+                if #available(iOS 16.0, *) {
+                    IrisDomesticaPath()
+                        .fill(.yellow.gradient)
+                        .opacity(item < 20 ? 0 : 1)
+                        .frame(width: 160, height: 30)
+                        .offset(x: 75)
+                        .rotationEffect(.degrees((Double(item) * angle) + 30))
+                        .scaleEffect(CGFloat(scale))
+                } else {
+                    // Fallback on earlier versions
+                    IrisDomesticaPath()
+                        .fill(.yellow)
+                        .opacity(item < 20 ? 0 : 1)
+                        .frame(width: 160, height: 30)
+                        .offset(x: 75)
+                        .rotationEffect(.degrees((Double(item) * angle) + 30))
+                        .scaleEffect(CGFloat(scale))
+                }
             }
         }
         .padding()

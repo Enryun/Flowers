@@ -17,13 +17,23 @@ struct ApricotFlower: View {
         ZStack {
             ForEach(0..<6) { item in
                 ZStack {
-                    RoundedRectangle(cornerRadius: 50)
-                        .fill(.yellow.gradient)
-                        .frame(width: 150, height: 150, alignment: .center)
-                        .offset(y: -90)
-                        .animation(.easeInOut(duration: 4).delay(0.5).repeatForever(autoreverses: true), value: scale)
-                        .rotationEffect(.degrees(Double(item) * angle))
-                        .scaleEffect(CGFloat(scale))
+                    if #available(iOS 16.0, *) {
+                        RoundedRectangle(cornerRadius: 50)
+                            .fill(.yellow.gradient)
+                            .frame(width: 150, height: 150, alignment: .center)
+                            .offset(y: -90)
+                            .animation(.easeInOut(duration: 4).delay(0.5).repeatForever(autoreverses: true), value: scale)
+                            .rotationEffect(.degrees(Double(item) * angle))
+                            .scaleEffect(CGFloat(scale))
+                    } else {
+                        // Fallback on earlier versions
+                        RoundedRectangle(cornerRadius: 50)
+                            .fill(.yellow)
+                            .frame(width: 150, height: 150, alignment: .center)
+                            .offset(y: -90)
+                            .animation(.easeInOut(duration: 4).delay(0.5).repeatForever(autoreverses: true), value: scale)
+                            .rotationEffect(.degrees(Double(item) * angle))
+                    }
 //                      Very Interesting
 //                      .blendMode(.exclusion)
                     
@@ -42,12 +52,22 @@ struct ApricotFlower: View {
                         .overlay {
                             ZStack {
                                 ForEach(0..<24) { item in
-                                    NormalFlowerPath()
-                                        .fill(.black.gradient)
-                                        .frame(width: 8, height: 8)
-                                        .offset(x: 20)
-                                        .rotationEffect(.degrees((Double(item) * angle2) + 30))
-                                        .scaleEffect(CGFloat(scale))
+                                    if #available(iOS 16.0, *) {
+                                        NormalFlowerPath()
+                                            .fill(.black.gradient)
+                                            .frame(width: 8, height: 8)
+                                            .offset(x: 20)
+                                            .rotationEffect(.degrees((Double(item) * angle2) + 30))
+                                            .scaleEffect(CGFloat(scale))
+                                    } else {
+                                        // Fallback on earlier versions
+                                        NormalFlowerPath()
+                                            .fill(.black)
+                                            .frame(width: 8, height: 8)
+                                            .offset(x: 20)
+                                            .rotationEffect(.degrees((Double(item) * angle2) + 30))
+                                            .scaleEffect(CGFloat(scale))
+                                    }
                                 }
                     
                                 
@@ -59,12 +79,22 @@ struct ApricotFlower: View {
                                         .rotationEffect(.degrees((Double(item) * angle) + 30))
                                         .scaleEffect(CGFloat(scale))
                                     
-                                    DrawingPath()
-                                        .fill(.red.gradient)
-                                        .frame(width: 110, height: 20)
-                                        .offset(x: 75)
-                                        .rotationEffect(.degrees((Double(item) * angle) + 30))
-                                        .scaleEffect(CGFloat(scale))
+                                    if #available(iOS 16.0, *) {
+                                        DrawingPath()
+                                            .fill(.red.gradient)
+                                            .frame(width: 110, height: 20)
+                                            .offset(x: 75)
+                                            .rotationEffect(.degrees((Double(item) * angle) + 30))
+                                            .scaleEffect(CGFloat(scale))
+                                    } else {
+                                        // Fallback on earlier versions
+                                        DrawingPath()
+                                            .fill(.red)
+                                            .frame(width: 110, height: 20)
+                                            .offset(x: 75)
+                                            .rotationEffect(.degrees((Double(item) * angle) + 30))
+                                            .scaleEffect(CGFloat(scale))
+                                    }
                                 }
                             }
                             
