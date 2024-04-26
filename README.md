@@ -152,5 +152,7 @@ And that was it, we have a beautiful Daisy Flower. Try exploring with different 
 Don’t limit yourself to basic shapes. Start creating unique, eye-catching designs today with custom shapes in SwiftUI today.
 
 ## Author
+
 James Thang, find me on [LinkedIn](https://www.linkedin.com/in/jamesthang/)
-Learn more about SwiftUI, check out my book [Amazon]([https://www.linkedin.com/in/jamesthang/](https://www.amazon.com/Ultimate-SwiftUI-Handbook-iOS-Developers-ebook/dp/B0CKBVY7V6/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1696776124&sr=8-1))
+
+Learn more about SwiftUI, check out my book :books: on [Amazon](https://www.amazon.com/Ultimate-SwiftUI-Handbook-iOS-Developers-ebook/dp/B0CKBVY7V6/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1696776124&sr=8-1)
