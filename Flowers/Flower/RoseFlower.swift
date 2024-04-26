@@ -14,22 +14,12 @@ struct RoseFlower: View {
     var body: some View {
         ZStack {
             ForEach(0..<5) { item in
-                if #available(iOS 16.0, *) {
-                    NormalFlowerPath()
-                        .fill(.red.gradient)
-                        .frame(width: 90, height: 50)
-                        .offset(x: 40)
-                        .rotationEffect(.degrees((Double(item) * angle) + 30))
-                        .scaleEffect(CGFloat(scale))
-                } else {
-                    // Fallback on earlier versions
-                    NormalFlowerPath()
-                        .fill(.red)
-                        .frame(width: 90, height: 50)
-                        .offset(x: 40)
-                        .rotationEffect(.degrees((Double(item) * angle) + 30))
-                        .scaleEffect(CGFloat(scale))
-                }
+                NormalFlowerPath()
+                    .fill(.red.gradient)
+                    .frame(width: 90, height: 50)
+                    .offset(x: 40)
+                    .rotationEffect(.degrees((Double(item) * angle) + 30))
+                    .scaleEffect(CGFloat(scale))
             }
             
         }

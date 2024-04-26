@@ -23,22 +23,12 @@ struct FourLeafClover: View {
                     .rotationEffect(.degrees(Double(item) * angle + 60))
                     .scaleEffect(CGFloat(scale))
                 
-                if #available(iOS 16.0, *) {
-                    RoundedRectangle(cornerRadius: 0.5)
-                        .fill(Gradient(colors: [.orange, .yellow, .green]))
-                        .frame(width: 1, height: 190)
-                        .offset(y: -65)
-                        .rotationEffect(.degrees(Double(item) * angle + 60))
-                        .scaleEffect(CGFloat(scale))
-                } else {
-                    // Fallback on earlier versions
-                    RoundedRectangle(cornerRadius: 0.5)
-                        .fill(.black.opacity(0.5))
-                        .frame(width: 1, height: 190)
-                        .offset(y: -65)
-                        .rotationEffect(.degrees(Double(item) * angle + 60))
-                        .scaleEffect(CGFloat(scale))
-                }
+                RoundedRectangle(cornerRadius: 0.5)
+                    .fill(Gradient(colors: [.orange, .yellow, .green]))
+                    .frame(width: 1, height: 190)
+                    .offset(y: -65)
+                    .rotationEffect(.degrees(Double(item) * angle + 60))
+                    .scaleEffect(CGFloat(scale))
             }
         }
         .padding()

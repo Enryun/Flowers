@@ -17,52 +17,25 @@ struct GattungCamelliaFlower: View {
     var body: some View {
         ZStack {
             ForEach(0..<5) { item in
+                CheryBlossomFlowerPath()
+                    .fill(.pink.gradient.opacity(0.8))
+                    .frame(width: 100, height: 100)
+                    .offset(y: -60)
+                    .rotationEffect(.degrees(Double(item) * angle + 36))
+                    .scaleEffect(CGFloat(scale))
                 
-                if #available(iOS 16.0, *) {
-                    CheryBlossomFlowerPath()
-                        .fill(.pink.gradient.opacity(0.8))
-                        .frame(width: 100, height: 100)
-                        .offset(y: -60)
-                        .rotationEffect(.degrees(Double(item) * angle + 36))
-                        .scaleEffect(CGFloat(scale))
-                    
-                    CheryBlossomFlowerPath()
-                        .fill(.pink.gradient.opacity(0.5))
-                        .frame(width: 120, height: 100)
-                        .offset(y: -60)
-                        .rotationEffect(.degrees(Double(item) * angle))
-                        .scaleEffect(CGFloat(scale))
-                } else {
-                    // Fallback on earlier versions
-                    CheryBlossomFlowerPath()
-                        .fill(.pink.opacity(0.8))
-                        .frame(width: 100, height: 100)
-                        .offset(y: -60)
-                        .rotationEffect(.degrees(Double(item) * angle + 36))
-                        .scaleEffect(CGFloat(scale))
-                    
-                    CheryBlossomFlowerPath()
-                        .fill(.pink.opacity(0.5))
-                        .frame(width: 120, height: 100)
-                        .offset(y: -60)
-                        .rotationEffect(.degrees(Double(item) * angle))
-                        .scaleEffect(CGFloat(scale))
-                }
-
-                
+                CheryBlossomFlowerPath()
+                    .fill(.pink.gradient.opacity(0.5))
+                    .frame(width: 120, height: 100)
+                    .offset(y: -60)
+                    .rotationEffect(.degrees(Double(item) * angle))
+                    .scaleEffect(CGFloat(scale))
             }
         }
         .overlay {
-            if #available(iOS 16.0, *) {
-                Circle()
-                    .fill(.yellow.gradient)
-                    .frame(width: 30, height: 30)
-            } else {
-                // Fallback on earlier versions
-                Circle()
-                    .fill(.yellow)
-                    .frame(width: 30, height: 30)
-            }
+            Circle()
+                .fill(.yellow.gradient)
+                .frame(width: 30, height: 30)
         }
         .padding()
         .padding(.bottom, 50)

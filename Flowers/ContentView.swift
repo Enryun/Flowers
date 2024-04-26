@@ -9,22 +9,81 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView(.vertical) {
-            VStack(spacing: 250) {
-                ApricotFlower(delayTime: 0.5)
-                YellowDaisyFlower(delayTime: 1)
-                CherryBlossom_(delayTime: 1.5)
-                TuberoseFlower(delayTime: 2)
-                MarigoldFlower(delayTime: 2.5)
-                GattungCamelliaFlower(delayTime: 3)
-                Sunflower(delayTime: 3.5)
-                FourLeafClover(delayTime: 4)
-                RoseMyrtleFlower(delayTime: 4.5)
-                IrisDomesticaFlower(delayTime: 5)
+        NavigationStack {
+            VStack {
+                NavigationLink {
+                    ApricotFlower(delayTime: 0.5)
+                } label: {
+                    Text("Apricot Flower")
+                        .font(.title)
+                }
+
+                NavigationLink {
+                    YellowDaisyFlower(delayTime: 0.5)
+                } label: {
+                    Text("Yellow Daisy Flower")
+                        .font(.title)
+                }
+
+                NavigationLink {
+                    CherryBlossom_(delayTime: 0.5)
+                } label: {
+                    Text("Cherry Blossom")
+                        .font(.title)
+                }
+                
+                NavigationLink {
+                    TuberoseFlower(delayTime: 0.5)
+                } label: {
+                    Text("Tuberose Flower")
+                        .font(.title)
+                }
+                
+                NavigationLink {
+                    MarigoldFlower(delayTime: 0.5)
+                } label: {
+                    Text("Marigold")
+                        .font(.title)
+                }
+                
+                NavigationLink {
+                    GattungCamelliaFlower(delayTime: 0.5)
+                } label: {
+                    Text("Gattung Camellia")
+                        .font(.title)
+                }
+                
+                NavigationLink {
+                    Sunflower(delayTime: 0.5)
+                } label: {
+                    Text("Sunflower")
+                        .font(.title)
+                }
+                
+                NavigationLink {
+                    FourLeafClover(delayTime: 0.5)
+                } label: {
+                    Text("FourLeaf Clover")
+                        .font(.title)
+                }
+                
+                NavigationLink {
+                    RoseMyrtleFlower(delayTime: 0.5)
+                } label: {
+                    Text("Rose Myrtle")
+                        .font(.title)
+                }
+                
+                NavigationLink {
+                    IrisDomesticaFlower(delayTime: 0.5)
+
+                } label: {
+                    Text("Iris Domestica")
+                        .font(.title)
+                }
             }
-            .offset(y: 100)
         }
-        
+        .preferredColorScheme(.dark)
     }
 }
 

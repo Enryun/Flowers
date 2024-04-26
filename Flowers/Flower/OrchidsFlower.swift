@@ -15,54 +15,32 @@ struct OrchidsFlower: View {
     var body: some View {
         ZStack {
             ForEach(0..<5) { item in
-                if #available(iOS 16.0, *) {
-                    NormalFlowerPath()
-                        .fill(Gradient(colors: [.white, .white.opacity(0.8), .white.opacity(0.4)]))
-                        .frame(width: 260, height: 200)
-                        .offset(y: -105)
-                        .scaleEffect(CGFloat(scale))
-                        .rotationEffect(.degrees(Double(item) * angle))
-                        .opacity((item == 1 || item == 4) ? 0 : 1)
-                } else {
-                    // Fallback on earlier versions
-                    NormalFlowerPath()
-                        .fill(.white)
-                        .frame(width: 260, height: 200)
-                        .offset(y: -105)
-                        .scaleEffect(CGFloat(scale))
-                        .rotationEffect(.degrees(Double(item) * angle))
-                        .opacity((item == 1 || item == 4) ? 0 : 1)
-                }
+                NormalFlowerPath()
+                    .fill(Gradient(colors: [.white, .white.opacity(0.8), .white.opacity(0.4)]))
+                    .frame(width: 260, height: 200)
+                    .offset(y: -105)
+                    .scaleEffect(CGFloat(scale))
+                    .rotationEffect(.degrees(Double(item) * angle))
+                    .opacity((item == 1 || item == 4) ? 0 : 1)
             }
             
             ForEach(0..<2) { item in
-                if #available(iOS 16.0, *) {
-                    OrchidsPatelPath()
-                        .fill(
-                            Gradient(colors:
-                                        [.white,
-                                         .white.opacity(0.8),
-                                         .white.opacity(0.4),
-                                         .clear,
-                                         .white.opacity(0.4),
-                                         .white.opacity(0.8),
-                                        ])
-                        )
-                        .frame(width: 250, height: 250)
-                        .offset(y: 135)
-                        .rotationEffect(.degrees(Double(item) * angle2 + 90))
-                    //                    .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: item == 1 ? 0 : 1.0, z: 0.0), anchor: .center)
-                        .scaleEffect(CGFloat(scale))
-                } else {
-                    // Fallback on earlier versions
-                    OrchidsPatelPath()
-                        .fill(.white)
-                        .frame(width: 250, height: 250)
-                        .offset(y: 135)
-                        .rotationEffect(.degrees(Double(item) * angle2 + 90))
-                    //                    .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: item == 1 ? 0 : 1.0, z: 0.0), anchor: .center)
-                        .scaleEffect(CGFloat(scale))
-                }
+                OrchidsPatelPath()
+                    .fill(
+                        Gradient(colors:
+                                    [.white,
+                                     .white.opacity(0.8),
+                                     .white.opacity(0.4),
+                                     .clear,
+                                     .white.opacity(0.4),
+                                     .white.opacity(0.8),
+                                    ])
+                    )
+                    .frame(width: 250, height: 250)
+                    .offset(y: 135)
+                    .rotationEffect(.degrees(Double(item) * angle2 + 90))
+                //                    .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: item == 1 ? 0 : 1.0, z: 0.0), anchor: .center)
+                    .scaleEffect(CGFloat(scale))
             }
             
         }

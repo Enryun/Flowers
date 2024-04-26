@@ -19,6 +19,26 @@ struct ChrysanthemumPath: Shape {
     }
 }
 
+struct ChrysanthemumPath_Previews: PreviewProvider {
+    static var previews: some View {
+        ChrysanthemumPath()
+            .frame(width: 110, height: 20)
+            .foregroundColor(.yellow)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 struct ChrysanthemumOppositePath: Shape {
     func path(in rect: CGRect) -> Path {
@@ -33,13 +53,7 @@ struct ChrysanthemumOppositePath: Shape {
 
 
 
-struct ChrysanthemumPath_Previews: PreviewProvider {
-    static var previews: some View {
-        ChrysanthemumOppositePath()
-            .frame(width: 110, height: 20)
-            .foregroundColor(.yellow)
-    }
-}
+
 
 
 

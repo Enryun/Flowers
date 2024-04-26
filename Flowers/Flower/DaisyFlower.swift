@@ -26,16 +26,9 @@ struct DaisyFlower: View {
             }
         }
         .overlay {
-            if #available(iOS 16.0, *) {
-                Circle()
-                    .fill(.yellow.gradient)
-                    .frame(width: 60, height: 60)
-            } else {
-                // Fallback on earlier versions
-                Circle()
-                    .fill(.yellow)
-                    .frame(width: 60, height: 60)
-            }
+            Circle()
+                .fill(.yellow.gradient)
+                .frame(width: 60, height: 60)
         }
         .padding()
         .padding(.bottom, 50)
