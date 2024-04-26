@@ -77,5 +77,80 @@ Here is the result:
 
 <img width="346" alt="Shape_SwiftUI_2" src="https://github.com/Enryun/Flowers/assets/45484154/9e677164-771d-44ec-8386-ee83fa01b6ab">
 
+## Draw Flower
+
+Recently, we took a chance with the inspiration from the Flowers Festival in Vietnam to draw some different types of Flowers.
+
+Let's draw this beautiful yellow daisy flower:
+
+<img width="364" alt="Shape_SwiftUI_8" src="https://github.com/Enryun/Flowers/assets/45484154/104d2214-2cc6-403f-8217-f16077f9c1c4">
+
+Now to draw this Flower Custom Shape, we separated them into 2 component: the Pistil and the Petal. The Pistil is simple here with Circle Shape. But its Petal is where we need to make a Custom Shape. And it is easy in SwiftUI.
+
+Let's make our custom DaisyPental:
+
+```swift
+struct DaisyPental: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: rect.minX, y: rect.midY))
+        path.addArc(center: CGPoint(x: rect.maxX, y: rect.midY), radius: rect.maxX*(1/11), startAngle: .degrees(90), endAngle: .degrees(270), clockwise: true)
+        return path
+    }
+}
+```
+
+We have learned about `move(to end: CGPoint)`, here we will start at the middle left point. Then the new method we use here `addArc(center: CGPoint, radius: CGFloat, startAngle: Angle, endAngle: Angle, clockwise: Bool)` which will add an arc of a circle to the path, specified with a radius and angles.
+
+Here we want half a circle with the center at the middle right point and the radius to be 1/11 the width of our available width space.
+
+Result:
+
+<img width="359" alt="Shape_SwiftUI_9" src="https://github.com/Enryun/Flowers/assets/45484154/3493b769-ad32-4825-b4ba-60709349b519">
+
+Now we have the Petal Shape, the rest is how many numbers of them and their placements around the Pistil Circle.
+
+```swift
+struct YellowDaisyFlower: View {
+    
+    @State var angle: Double = 0
+    @State var scale: CGFloat = 0
+        
+    var body: some View {
+        ZStack {
+            ForEach(0..<36) { item in
+                DaisyPental()
+                    .fill(.yellow.gradient)
+                    .frame(width: 110, height: 20)
+                    .offset(x: 75)
+                    .rotationEffect(.degrees((Double(item) * angle) + 30))
+                    .scaleEffect(CGFloat(scale))
+            }
+        }
+        .overlay {
+            Circle()
+                .frame(width: 60, height: 60)
+                .foregroundColor(.orange)
+        }
+        .padding()
+        .onAppear {
+            withAnimation(.easeInOut(duration: 4).delay(0.1)) {
+                angle = 10
+                scale = 1
+            }
+        }
+    }
+}
+```
+For this Flowers, it will have 36 petals. Because 1 circle is 360 degree so for we need to rotate each petal 360 / 36 = 10 degree from each others. And it is easily done with the help of .rotationEffect() modifier. The scale and delay time is for the beautiful blooming Animation using scaleEffect() modifier.
+
+Result:
+
+<img src="https://github.com/Enryun/Flowers/assets/45484154/5101dcc4-5b5b-4a1b-bf75-a6edf1fbf258" width="200">
+
+And that was it, we have a beautiful Daisy Flower. Try exploring with different sizing number and may be there will be a Shape that surprise you.
+
+Don’t limit yourself to basic shapes. Start creating unique, eye-catching designs today with custom shapes in SwiftUI today.
+
 ## Author
 James Thang, find me on [LinkedIn](https://www.linkedin.com/in/jamesthang/)
