@@ -1,8 +1,7 @@
 # Flowers is a Project that use SwiftUI to draw Flowers
 
-<img src="https://github.com/Enryun/Flowers/assets/45484154/bae28441-a4d6-49df-addc-aa01b5cc7b20" width="200">
-<img src="https://github.com/Enryun/Flowers/assets/45484154/8c10738e-12a0-4690-b61f-e53250a9b719" width="200">
-<img src="https://github.com/Enryun/Flowers/assets/45484154/ff80e239-a3c0-422a-aa9c-2806a9bf1cc0" width="200">
+<img src="https://github.com/Enryun/Flowers/assets/45484154/5101dcc4-5b5b-4a1b-bf75-a6edf1fbf258" width="200">
+<img src="https://github.com/Enryun/Flowers/assets/45484154/390bb8c4-f595-40cb-93f9-253bf497f21c" width="200">
 
 ## Shape protocol
 
@@ -146,7 +145,7 @@ For this Flowers, it will have 36 petals. Because 1 circle is 360 degree so for 
 
 Result:
 
-<img src="https://github.com/Enryun/Flowers/assets/45484154/5101dcc4-5b5b-4a1b-bf75-a6edf1fbf258" width="200">
+<img src="https://github.com/Enryun/Flowers/assets/45484154/5101dcc4-5b5b-4a1b-bf75-a6edf1fbf258" width="364">
 
 And that was it, we have a beautiful Daisy Flower. Try exploring with different sizing number and may be there will be a Shape that surprise you.
 
@@ -154,3 +153,4 @@ Don’t limit yourself to basic shapes. Start creating unique, eye-catching desi
 
 ## Author
 James Thang, find me on [LinkedIn](https://www.linkedin.com/in/jamesthang/)
+Learn more about SwiftUI, check out my book [Amazon]([https://www.linkedin.com/in/jamesthang/](https://www.amazon.com/Ultimate-SwiftUI-Handbook-iOS-Developers-ebook/dp/B0CKBVY7V6/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1696776124&sr=8-1))
