@@ -3,7 +3,13 @@
 <img src="https://github.com/Enryun/Flowers/assets/45484154/5101dcc4-5b5b-4a1b-bf75-a6edf1fbf258" width="200">
 <img src="https://github.com/Enryun/Flowers/assets/45484154/390bb8c4-f595-40cb-93f9-253bf497f21c" width="200">
 
-## Shape protocol
+## Table of Contents
+1. [Shape protocol](#shape)
+2. [Custom shape with Triangle](#triangle)
+3. [Draw Flower](#flower)
+4. [Author](#author)
+   
+## Shape
 
 In SwiftUI, Shape refers to a protocol that defines the outline of a view or control. It's a fundamental concept for drawing and designing custom views or controls with different shapes. The Shape protocol is part of the SwiftUI framework, which is used to create user interfaces in a declarative manner.
 
@@ -25,7 +31,7 @@ In context if Swift, the origin point(0, 0) will be at the top left corner. This
 
 As we move the right, the x-value will increase and as we move down the y-value will increase. Let's take this knowledge to practice starting with some basic geometry shape.
 
-## Drawing Custom Shapes
+## Triangle
 
 You can conform to the Shape protocol to create custom shapes, and you can use these custom shapes in SwiftUI views to draw, fill, or stroke them as needed.
 
@@ -76,7 +82,7 @@ Here is the result:
 
 <img width="346" alt="Shape_SwiftUI_2" src="https://github.com/Enryun/Flowers/assets/45484154/9e677164-771d-44ec-8386-ee83fa01b6ab">
 
-## Draw Flower
+## Flower
 
 Recently, we took a chance with the inspiration from the Flowers Festival in Vietnam to draw some different types of Flowers.
 
